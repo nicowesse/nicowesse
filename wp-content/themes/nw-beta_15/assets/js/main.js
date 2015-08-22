@@ -37,11 +37,13 @@ $(document).ready(function() {
 
     $('.c-nav-search').on({
         mouseenter: function() {
+            console.log('Hover');
             $(this).addClass('is-active');
         },
         mouseleave: function() {
             var self = this;
-            //$(this).delay(3000).removeClass('is-active');
+
+            console.log('Not hover');
             setTimeout(function () {
                 $(self).removeClass('is-active');
             }, 2000);
