@@ -16,7 +16,7 @@
 <footer class="row site-footer">
 	<div class="large-12 columns">
 		<div class="footer-content">
-			<a class="footer-name" href="mailto: me@nicowesse.com">me@nicowesse.com</a>
+			<a class="footer-name" href="mailto: me@nicowesse.com">hello@nicowesse.com</a>
 		</div>
 	</div>
 </footer>
