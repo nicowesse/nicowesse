@@ -15,6 +15,32 @@
             color: $header-black;
         }
 
+    .c-post__meta {
+        margin: 2rem 0;
+        padding: 2rem 0;
+        opacity: 0.25;
+        font-style: italic;
+
+        transition: 250ms;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &-publish {
+            
+        }
+
+        &-category {
+
+        }
+
+        &-modified {
+            float: right;
+            text-align: right;
+        }
+    }
+
     .c-post__content {
 
         blockquote {
@@ -31,6 +57,39 @@
             pre {
                 margin-bottom: 0;
                 color: $iron;
+            }
+        }
+    }
+
+    .c-post__nav {
+        display: flex;
+        margin: 2rem 0;
+
+        &-link {
+            padding: 3rem 0;
+            flex: 1 1 0;
+
+            font-size: $h4;
+
+            &--next {
+
+                &::before {
+                    content: "←";
+                    padding-right: 1rem;
+                }
+            }
+
+            &--prev {
+                text-align: right;
+
+                &::after {
+                    content: "→";
+                    padding-left: 1rem;
+                }
+            }
+
+            &--single {
+                
             }
         }
     }

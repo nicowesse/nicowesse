@@ -10,6 +10,10 @@
 
     }
 
+    .comment-respond {
+        margin-top: 5rem;
+    }
+
     .c-comment__field {
 
     }
@@ -93,12 +97,11 @@
     }
 
         .comment {
-            padding: 1rem 0;
             list-style: none;
         }
 
             .comment-body {
-                margin: 2rem 0;
+                padding: 2rem 0;
             }
 
             .comment-meta {
@@ -112,6 +115,12 @@
                     }
                 }
 
+                .comment-author-nico > .comment-body > .comment-meta > .comment-author {
+                    &::before {
+                        content: "💃";
+                        color: gold;
+                    }
+                }
                 .comment-metadata {
                     display: inline-block;
                     margin-left: 0.25rem;
@@ -141,5 +150,12 @@
                     }
 
         .children {
-            border-left: 0.25rem solid $gainsboro;
+            padding: 0;
+
+            .comment {
+                margin: 1rem 0;
+                padding: 0;
+                padding-left: 3rem;
+                border-left: 0.25rem solid #DDDDDD;
+            }
         }

@@ -29,16 +29,29 @@ get_header(); ?>
 				<?php echo the_content(); ?>
 			</section>
 
-			<!--<nav class="c-post__nav">
-				<pre>
+			<section class="c-post__meta">
+				<span class="c-post__meta-publish">Published: <?php the_date('d.m.y'); ?></span>
+				<span class="c-post__meta-category">in <?php the_category(','); ?></span>
+				<span class="c-post__meta-modified">Updated: <?php the_modified_date('d.m.y'); ?></span>
+			</section>
 
-				<?php $prev_post = get_adjacent_post( false, '', true ); ?>
-				<?php if ( is_a( $prev_post, 'WP_Post' ) ) { ?>
-				<a href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo get_the_title( $prev_post->ID ); ?></a>
-				<?php } ?>
+			<nav class="c-post__nav">
 
-				</pre>
-			</nav>-->
+				<?php 
+				$next_post = get_adjacent_post( false, '', false );
+				$prev_post = get_adjacent_post( false, '', true ); 
+				$single = ( $next_post && $prev_post ) ? '' : ' c-post__nav-link--single';
+				?>
+
+				<?php if ( $next_post ) : ?>
+				<a class="c-post__nav-link c-post__nav-link--next<?php echo $single; ?>" href="<?php echo get_permalink( $next_post->ID ); ?>"><?php echo get_the_title( $next_post->ID ); ?></a>
+				<?php endif; ?>
+				
+				<?php if ( $prev_post ) : ?>
+				<a class="c-post__nav-link c-post__nav-link--prev<?php echo $single; ?>" href="<?php echo get_permalink( $prev_post->ID ); ?>"><?php echo get_the_title( $prev_post->ID ); ?></a>
+				<?php endif; ?>
+				
+			</nav>
 
 
 			<?php if ( comments_open() ) : ?>

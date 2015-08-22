@@ -572,9 +572,6 @@ html[xmlns] .slides {
 /* Control Nav */
 .flex-control-nav {
   width: 100%;
-  position: absolute;
-  bottom: -40px;
-  text-align: center;
 }
 
 .flex-control-nav li {
@@ -609,15 +606,20 @@ html[xmlns] .slides {
 }
 
 .flex-control-thumbs {
-  display: table;
-  table-layout: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   position: static;
   overflow: hidden;
 }
 
 .flex-control-thumbs li {
-  display: table-cell;
   max-width: 20%;
   margin: 0;
   padding: 0;
@@ -1056,6 +1058,24 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   color: #333;
 }
 
+.c-post__meta {
+  margin: 2rem 0;
+  padding: 2rem 0;
+  opacity: 0.25;
+  font-style: italic;
+  -webkit-transition: 250ms;
+          transition: 250ms;
+}
+
+.c-post__meta:hover {
+  opacity: 1;
+}
+
+.c-post__meta-modified {
+  float: right;
+  text-align: right;
+}
+
 .c-post__content blockquote {
   margin: 2rem 0;
   padding: 1.5rem 3rem;
@@ -1071,6 +1091,37 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 .c-post__content blockquote pre {
   margin-bottom: 0;
   color: #CCCCCC;
+}
+
+.c-post__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.c-post__nav-link {
+  padding: 3rem 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
+  font-size: 1.7rem;
+}
+
+.c-post__nav-link--next::before {
+  content: "←";
+  padding-right: 1rem;
+}
+
+.c-post__nav-link--prev {
+  text-align: right;
+}
+
+.c-post__nav-link--prev::after {
+  content: "→";
+  padding-left: 1rem;
 }
 
 /*  ==========================================================================
@@ -1176,6 +1227,10 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   margin: 5rem 0;
 }
 
+.comment-respond {
+  margin-top: 5rem;
+}
+
 .c-comment__label {
   display: block;
   margin: 0.25rem 0;
@@ -1243,12 +1298,11 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 }
 
 .comment {
-  padding: 1rem 0;
   list-style: none;
 }
 
 .comment-body {
-  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 .comment-meta {
@@ -1261,6 +1315,11 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .comment-author .says {
   display: none;
+}
+
+.comment-author-nico > .comment-body > .comment-meta > .comment-author::before {
+  content: "💃";
+  color: gold;
 }
 
 .comment-metadata {
@@ -1283,6 +1342,13 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 }
 
 .children {
+  padding: 0;
+}
+
+.children .comment {
+  margin: 1rem 0;
+  padding: 0;
+  padding-left: 3rem;
   border-left: 0.25rem solid #DDDDDD;
 }
 

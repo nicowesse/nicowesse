@@ -22,7 +22,7 @@ if ( post_password_required() ) {
 
 <?php if ( comments_open() ) : ?>
 
-	<h2 class="c-comment__title">Comments</h2>
+	<h3 class="c-comment__title">Comments</h3>
 
 	<?php if ( have_comments() ) : ?>
 
@@ -39,11 +39,15 @@ if ( post_password_required() ) {
 			?>
 		</ul>
 
+	<?php else : ?>
+
+	<p class="c-comment__title">No comments. This is your chance!</p>
+
 	<?php endif; // have_comments()
 
 	$comment_args = array(
 		'title_reply'=> __( 'Write a comment' ),
-		'title_reply_to' => __( 'Reply %s' ),
+		'title_reply_to' => __( 'Reply to %s' ),
 		'cancel_reply_link' => __( 'Cancel reply' ),
 		'label_submit' => __( 'Post comment' ),
 		'comment_notes_before' => '<p class="c-comment__notes">Your email stays private. Fields in red is required.</p>',
