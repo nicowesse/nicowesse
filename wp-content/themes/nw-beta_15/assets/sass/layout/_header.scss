@@ -40,6 +40,10 @@ $header-color: $jet;
 
         .c-sitename__link {
             color: $header-color;
+
+            &:hover {
+                color: $nw-blue;
+            }
         }
 
         .c-sitename__tagline {
