@@ -10,7 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('c-page c-content--page'); ?>>
     <header class="c-page-header">
-        <h1 class="c-page-header__title"><?php the_title(); ?></h1>
+        <h2 class="c-page-header__title"><?php the_title(); ?></h2>
     </header>
 
 

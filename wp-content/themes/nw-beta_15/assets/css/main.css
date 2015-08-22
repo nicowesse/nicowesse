@@ -1050,7 +1050,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-page-header__title {
   margin: 0;
-  font-size: 3rem;
+  color: #333;
 }
 
 /*  ==========================================================================
