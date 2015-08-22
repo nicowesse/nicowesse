@@ -1,0 +1,14 @@
+/* Site Styles: Footer */
+
+.footer-content {
+	padding: 3rem 0 6rem;
+	text-align: center;
+
+	.footer-name {
+		font-size: 1.75rem;
+
+		&:hover {
+			font-weight: 600;
+		}
+	}
+}

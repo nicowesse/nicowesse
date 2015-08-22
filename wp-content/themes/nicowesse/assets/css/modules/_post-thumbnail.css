@@ -1,0 +1,142 @@
+.sticky-header {
+	margin-bottom: 28px;
+	color: #666;
+}
+
+.post-thumbnail,
+.post-caption {
+	margin: 0;
+	margin-bottom: 42px;
+	padding: 0;
+
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+	.post-thumbnail:hover {
+		cursor: pointer;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+	.post-thumbnail .post-image {
+		position: relative;
+		border-bottom: 7px solid #ff674d;
+		background-color: #EAEAEA;
+		min-height: 300px;
+		max-height: 300px;
+		overflow: hidden;
+	}
+
+		.post-thumbnail .post-link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+
+			-webkit-align-items: center;
+			-webkit-box-align: center; 
+			-moz-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+
+			-webkit-justify-content: center;
+			-webkit-box-pack: center; 
+			-moz-box-pack: center; 
+			-ms-flex-pack: center; 
+			justify-content: center;
+
+			flex-wrap: wrap;
+			
+			margin: 0;
+			padding: 10px 14px 0;
+			font-size: 3rem;
+			font-weight: 900;
+			text-align: center;
+			background-color: rgba(245,245,245, 0.5);
+			color: rgba(51, 51, 51, 1);
+			opacity: 0;
+
+			-webkit-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			-ms-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+
+			.post-thumbnail:hover .post-link,
+			.post-thumbnail .post-link.no-thumbnail {
+				opacity: 1;
+				padding-top: 0; 
+			}
+
+	.post-thumbnail img,
+	.post-caption img {
+		width: 100%;
+		overflow: hidden;
+		background-color: #EAEAEA;
+	}
+
+		.post-thumbnail figcaption {
+			width: 100%;
+			margin: 0;
+			background-color: #ff674d;
+			opacity: 0;
+			visibility: hidden;
+
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+
+			.post-thumbnail:hover figcaption {
+				opacity: 1;
+				visibility: visible;
+			}
+
+
+			.post-thumbnail .category-list {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+
+				-webkit-justify-content: space-between;
+				-webkit-box-pack: space-between; 
+				-moz-box-pack: space-between; 
+				-ms-flex-pack: space-between; 
+				justify-content: space-between;
+
+				margin: 0;
+			}
+
+			.post-thumbnail .category-list li {
+				flex: 1 0 0;
+				min-width: 25%;
+
+				list-style: none;
+				text-align: center;
+				padding: 7px 0;
+				
+				font-size: 1.375rem;
+				font-weight: bold;
+
+				color: #E5E5E5;
+			}

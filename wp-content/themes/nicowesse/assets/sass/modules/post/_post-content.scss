@@ -1,0 +1,66 @@
+/* Post Styles: Content */
+
+.post-content {
+
+	h1, h2, h3, h4 {
+		font-weight: bold;
+	}
+
+	.gallery-slider {
+		margin: 3rem 0;
+	}
+
+	& img {
+		display: inline-block;
+		max-width: 100%;
+	}
+
+	 img.alignleft {
+	 	display: block;
+		width: 50%;
+		float: left;
+		margin-right: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	& img.alignright {
+		width: 50%;
+		float: right;
+		margin-left: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	blockquote {
+		display: block;
+		text-align: center;
+		margin: 1.5rem 0;
+		padding: 1.5rem 5rem;
+		border-left: none;
+
+		&:before, &:after {
+			content: "";
+			display: block;
+			width: 30%;
+			height: 0;
+			margin: 0 auto;
+			border-bottom: 3px solid $snow;
+		}
+
+		&:before { margin-bottom: 2rem; }
+		&:after { margin-top: 2.5rem; }
+	}
+
+	& > ul, & > ol {
+		padding-left: 1.5rem;
+		margin-bottom: 1.5rem;
+
+		li {
+
+			font-size: 1.25rem;
+		}
+	}
+}
+
+.flexslider .slides img {
+	max-height: 90vh;
+}

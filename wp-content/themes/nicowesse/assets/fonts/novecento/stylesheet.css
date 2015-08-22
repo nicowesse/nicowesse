@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Novecento';
+    src: url('Novecentowide-Bold-webfont.eot');
+    src: url('Novecentowide-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentowide-Bold-webfont.svg#OpenSansBold') format('svg'),
+         url('Novecentowide-Bold-webfont.woff') format('woff'),
+         url('Novecentowide-Bold-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Novecento';
+    src: url('Novecentowide-DemiBold-webfont.eot');
+    src: url('Novecentowide-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentowide-DemiBold-webfont.svg#OpenSansBold') format('svg'),
+         url('Novecentowide-DemiBold-webfont.woff') format('woff'),
+         url('Novecentowide-DemiBold-webfont.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Novecento';
+    src: url('Novecentowide-Normal-webfont.eot');
+    src: url('Novecentowide-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentowide-Normal-webfont.svg#OpenSansBold') format('svg'),
+         url('Novecentowide-Normal-webfont.woff') format('woff'),
+         url('Novecentowide-Normal-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Novecento';
+    src: url('Novecentowide-Book-webfont.eot');
+    src: url('Novecentowide-Book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentowide-Book-webfont.svg#OpenSansBold') format('svg'),
+         url('Novecentowide-Book-webfont.woff') format('woff'),
+         url('Novecentowide-Book-webfont.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Novecento';
+    src: url('Novecentowide-Light-webfont.eot');
+    src: url('Novecentowide-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Novecentowide-Light-webfont.svg#OpenSansBold') format('svg'),
+         url('Novecentowide-Light-webfont.woff') format('woff'),
+         url('Novecentowide-Light-webfont.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+
+}
