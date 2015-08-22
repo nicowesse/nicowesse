@@ -22,6 +22,7 @@ $header-color: $jet;
     .c-sitename {
         display: table-cell;
         padding: $header-padding;
+        padding-left: 0;
         flex: 1 1 0;
 
         @include breakpoint(48rem) {

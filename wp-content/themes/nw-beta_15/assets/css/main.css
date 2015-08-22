@@ -817,6 +817,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 .c-sitename {
   display: table-cell;
   padding: 5rem 1rem;
+  padding-left: 0;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0;
