@@ -823,6 +823,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-sitename__link:hover {
   color: #5990ff;
+  padding-left: 2rem;
 }
 
 .c-sitename__tagline {
