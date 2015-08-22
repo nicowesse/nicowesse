@@ -4,31 +4,61 @@
 
 $border-style: 0.15rem solid $steel;
 
+.c-nav-search {
+	display: flex;
+	flex: 0 0 9%;
+	align-items: center;
+	opacity: 0.1;
+
+	transition: 250ms;
+
+	&:hover,
+	&.is-active {
+		flex: 0 0 25%;
+		opacity: 1;
+	}
+
+	@include breakpoint(48rem) {
+        opacity: 0.5;
+    }
+}
+
 .c-search-form {
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: stretch;
 	width: 100%;
 }
 
 	.c-search-form__field {
-		flex: 1 1 0;
+		flex: 1 1 50%;
 
 		padding: 1rem;
 		font-size: $h5;
 		font-weight: bold;
 		border: $border-style;
 
+		transition: 250ms;
+
 		&:focus {
 			border-color: $jet;
 			outline: none;
 		}
+
+		.c-nav-search & {
+			flex: 1 0 0%;
+			padding: 0rem;
+			font-size: 1rem;
+			border: none;
+		}
+
+		.c-nav-search.is-active & {
+			border-bottom: $border-style;
+		}
 	}
 
-	.c-search-form__submit {
+	.c-search-form__submit-container {
 		padding: 1rem 2rem;
-		font-size: $h5;
-		font-weight: bold;
 		border: $border-style;
 		border-left: none;
 		background-color: $vapor;
@@ -43,5 +73,39 @@ $border-style: 0.15rem solid $steel;
 		&:focus {
 			background-color: $nw-blue;
 			outline: 0;
+		}
+
+		.c-nav-search & {
+			padding: 0;
+			background-color: transparent;
+			border: none;
+
+			&::before {
+				content: "🔍";
+			}
+		}
+
+		.c-nav-search.is-active & {
+			border-bottom: $border-style;
+		}
+	}
+
+	.c-search-form__submit {
+		
+		font-size: $h5;
+		font-weight: bold;
+
+		// Remove default styling
+		border: none;
+		background-color: transparent;
+		padding: 0;
+
+		.c-nav-search & {
+			padding: 0.5rem;
+			content: "";
+
+			&::before {
+				content: "🔍";
+			}
 		}
 	}

@@ -788,19 +788,46 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
     ========================================================================== */
 .l-header {
   display: table;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .l-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .c-sitename {
   display: table-cell;
   padding: 5rem 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
 }
 
 @media (max-width: 48rem) {
   .c-sitename {
     display: block;
     margin-top: 5rem;
-    padding: 2rem 0;
+    padding: 4rem 0 6rem;
     font-size: 3.825rem;
     text-align: center;
   }
@@ -832,6 +859,10 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-nav {
   display: table-cell;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
   padding: 5rem 0;
   text-align: right;
 }
@@ -839,7 +870,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 @media (max-width: 48rem) {
   .c-nav {
     display: block;
-    padding: 2rem 0;
+    padding: 4rem 0 6rem;
     float: none;
     text-align: center;
   }
@@ -1362,15 +1393,48 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 /* ====================
 	Search component: c-search-form
 ==================== */
+.c-nav-search {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 9%;
+      -ms-flex: 0 0 9%;
+          flex: 0 0 9%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.1;
+  -webkit-transition: 250ms;
+          transition: 250ms;
+}
+
+.c-nav-search:hover,
+.c-nav-search.is-active {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 25%;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+  opacity: 1;
+}
+
+@media (max-width: 48rem) {
+  .c-nav-search {
+    opacity: 0.5;
+  }
+}
+
 .c-search-form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: stretch;
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
@@ -1380,13 +1444,15 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-search-form__field {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
+  -webkit-flex: 1 1 50%;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
   padding: 1rem;
   font-size: 1.13333rem;
   font-weight: bold;
   border: 0.15rem solid #666666;
+  -webkit-transition: 250ms;
+          transition: 250ms;
 }
 
 .c-search-form__field:focus {
@@ -1394,10 +1460,22 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   outline: none;
 }
 
-.c-search-form__submit {
+.c-nav-search .c-search-form__field {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0%;
+      -ms-flex: 1 0 0%;
+          flex: 1 0 0%;
+  padding: 0rem;
+  font-size: 1rem;
+  border: none;
+}
+
+.c-nav-search.is-active .c-search-form__field {
+  border-bottom: 0.15rem solid #666666;
+}
+
+.c-search-form__submit-container {
   padding: 1rem 2rem;
-  font-size: 1.13333rem;
-  font-weight: bold;
   border: 0.15rem solid #666666;
   border-left: none;
   background-color: #F6F6F6;
@@ -1405,12 +1483,43 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
           transition: 250ms;
 }
 
-.c-search-form__submit:hover {
+.c-search-form__submit-container:hover {
   background-color: #EEEEEE;
 }
 
-.c-search-form__submit:active,
-.c-search-form__submit:focus {
+.c-search-form__submit-container:active,
+.c-search-form__submit-container:focus {
   background-color: #5990ff;
   outline: 0;
+}
+
+.c-nav-search .c-search-form__submit-container {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.c-nav-search .c-search-form__submit-container::before {
+  content: "🔍";
+}
+
+.c-nav-search.is-active .c-search-form__submit-container {
+  border-bottom: 0.15rem solid #666666;
+}
+
+.c-search-form__submit {
+  font-size: 1.13333rem;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.c-nav-search .c-search-form__submit {
+  padding: 0.5rem;
+  content: "";
+}
+
+.c-nav-search .c-search-form__submit::before {
+  content: "🔍";
 }

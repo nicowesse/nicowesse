@@ -35,6 +35,19 @@ $(document).ready(function() {
 
     $('.c-post__content a').fluidbox();
 
+    $('.c-nav-search').on({
+        mouseenter: function() {
+            $(this).addClass('is-active');
+        },
+        mouseleave: function() {
+            var self = this;
+            //$(this).delay(3000).removeClass('is-active');
+            setTimeout(function () {
+                $(self).removeClass('is-active');
+            }, 2000);
+        }
+    });
+
     BackgroundCheck.init({
         targets: '.c-post__header',
         images: '.c-post__header',

@@ -64,4 +64,8 @@
 					'depth'			=> 2,
 				) ); ?>
 			</nav>
+
+			<div class="c-nav-search">
+				<?php get_search_form(); ?>
+			</div>
 		</header>
