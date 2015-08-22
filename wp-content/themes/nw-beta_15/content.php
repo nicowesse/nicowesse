@@ -10,7 +10,7 @@
  */
 
 if (has_post_thumbnail( $post->ID ) ) {
-    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'small' );
     $thumbnail_url = $thumbnail[0];
 }
 
