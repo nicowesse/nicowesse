@@ -1,0 +1,58 @@
+.single .site-header {
+	position: relative;
+	width: 100%;
+	height: 450px;
+	margin-bottom: 56px;
+	display: flex;
+	flex-flow: column wrap;
+
+	background-color: #DADADA;
+	background-size: cover;
+	background-position: center bottom;
+	background-attachment: fixed;
+}
+
+	.single .site-header-overlay {
+		background-color: rgba(245, 245, 245, 0.25);
+	}
+
+	.single .site-title {
+		margin: auto auto;
+		font-size: 5.5rem;
+		color: #222;
+		letter-spacing: 4px;
+		text-align: center;
+		pointer-events: auto;
+	}
+
+	.single .site-nav {
+		width: 100%;
+		text-align: center;
+		align-self: flex-end;
+		margin: 0 auto 0;
+		pointer-events: auto;
+	}
+
+		.single .site-nav ul {
+			position: relative;
+			margin: 0px auto;
+		}
+
+			.single .site-nav li {
+				display: inline-block;
+				list-style: none;
+			}
+
+			.single .site-nav li > a {
+				display: block;
+				padding: 12px 21px;
+
+				font-family: "Novecento";
+				font-weight: 800;
+				color: #222;
+				letter-spacing: 1px;
+			}
+
+				.single .site-nav li.current_page_item > a {
+					border-bottom: 5px solid #333;
+				}

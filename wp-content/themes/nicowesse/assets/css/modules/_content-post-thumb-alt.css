@@ -1,0 +1,109 @@
+article.frontpage {
+	width: 100%;
+	height: 100%;
+}
+
+.post-thumbnail {
+	position: relative;
+	margin: 0;
+	padding: 0;
+
+	border-bottom: 14px solid #ff674d;
+
+	-webkit-transition: all 0.25s;
+	-moz-transition: all 0.25s;
+	-o-transition: all 0.25s;
+	-ms-transition: all 0.25s;
+	transition: all 0.25s;
+}
+
+	.frontpage .post-thumbnail:hover {
+		cursor: pointer;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+	.post-thumbnail img {
+		width: 100%;
+		overflow: hidden;
+		background-color: #EAEAEA;
+	}
+
+		.frontpage .post-thumbnail img {
+			max-height: 100%;
+		}
+
+	.post-thumbnail figcaption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		-webkit-align-items: center;
+		-webkit-box-align: center; 
+		-moz-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+
+		-webkit-justify-content: center;
+		-webkit-box-pack: center; 
+		-moz-box-pack: center; 
+		-ms-flex-pack: center; 
+		justify-content: center;
+
+		flex-wrap: wrap;
+
+		text-align: center;
+
+		background-color: rgba(0, 0, 0, 0.25);
+		padding: 14px;
+		font-weight: 600;
+		color: white;
+		letter-spacing: 1px;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+		
+	}
+
+		.post-thumbnail .post-title {
+			font-size: 5rem;
+			color: white;
+			margin: 0 auto;
+		}
+
+		.post-thumbnail .post-excerpt {
+			padding: 0 10%;
+			margin: 0;
+		}
+
+		.post-thumbnail .post-link {
+			padding: 7px 14px;
+			border: 3px solid #ff674d;
+
+			-webkit-transition: all 0.5s;
+			-moz-transition: all 0.5s;
+			-o-transition: all 0.5s;
+			-ms-transition: all 0.5s;
+			transition: all 0.5s;
+		}
+
+			.post-thumbnail .post-link:hover,
+			.post-thumbnail .post-link:active {
+				background-color: #ff674d;
+				color: #181818;
+			}

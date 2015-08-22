@@ -1,0 +1,86 @@
+.page-title {
+	margin-bottom: 21px;
+	font-family: "Source Sans Pro";
+}
+
+/* 404 */
+
+.error-image img {
+	display: block;
+	width: 10%;
+	margin: 0 auto 28px;
+}
+
+/* Paging navigation */
+
+.paging-navigation {
+
+}
+
+	.pagination {
+		margin: 28px 0 56px;
+		text-align: center;
+	}
+
+		.pagination .page-numbers {
+			margin: 0 7px;
+			padding: 3px 12px;
+			border: 3px solid #ff674d;
+			border-radius: 3px;
+
+			font-size: 1.375rem;
+			font-weight: bold;
+			color: #ff674d;
+
+			-webkit-transition: all 0.25s;
+			-moz-transition: all 0.25s;
+			-o-transition: all 0.25s;
+			-ms-transition: all 0.25s;
+			transition: all 0.25s;
+		}
+
+			.pagination .page-numbers.current,
+			.pagination .page-numbers:hover,
+			.pagination .page-numbers:active {
+				background-color: #ff674d;
+				color: white;
+			}
+
+/* Project filter */
+
+.project-filter {
+	display: none;
+	margin: 0 0 56px;
+	text-align: center;
+}
+
+	.project-filter .filter {
+		display: inline-block;
+		margin: 0 7px;
+		padding: 3px 12px 2px;
+
+		list-style: none;
+
+		border: 3px solid #ff674d;
+		border-radius: 3px;
+
+		font-size: 1.375rem;
+		font-weight: bold;
+		color: #ff674d;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+		.project-filter .filter:first-child { margin-left: 0; }
+
+		.project-filter .filter.active,
+		.project-filter .filter:hover,
+		.project-filter .filter:active {
+			background-color: #ff674d;
+			color: white;
+			cursor: pointer;
+		}

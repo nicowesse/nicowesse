@@ -1,0 +1,32 @@
+.footer-content {
+	/*border-top: 6px solid #ff674d;*/
+	padding: 35px 0 70px;
+	text-align: center;
+	font-size: 1.375rem;
+}
+
+	.footer-content p {
+		display: inline-block;
+		color: #444;
+	}
+
+	.footer-content .footer-name {
+		font-size: 1em;
+		padding: 7px 14px;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+		.footer-content .footer-name:hover {
+			background-color: #ff674d;
+			color: white;
+		}
+
+	.footer-copy {
+		float: right;
+		text-align: right;
+	}

@@ -1,0 +1,124 @@
+/* Site Styles: Header */
+
+.site-header {
+	position: relative;
+	height: auto;
+	background-size: 100%;
+	background-position: center center;
+	background-attachment: fixed;
+	padding: 8rem 0 4rem;
+
+	&.sticky {
+		//display: none;
+		padding-top: 0;
+		border-bottom: 0.125rem solid $dark;
+
+		.post-title {
+			font-size: 1.375rem;
+			padding: 1rem;
+		}
+
+		.header-line, .post-image {
+			display: none;
+		}
+
+
+	}
+
+	.post-title {
+		display: inline-block;
+		margin: 0px;
+		padding: 3rem 0;
+		font-family: "Montserrat", "Helvetica", sans-serif;
+		font-size: 5em;
+		font-weight: bold;
+		text-transform: uppercase;
+
+		color: $dark;
+
+		-webkit-transition: all 0.25s;
+		-moz-transition: all 0.25s;
+		-o-transition: all 0.25s;
+		-ms-transition: all 0.25s;
+		transition: all 0.25s;
+	}
+
+	.header-line {
+		display: block;
+		margin: 0;
+		margin-bottom: 6rem;
+		padding-top: 0.25rem;
+		width: 100%;
+		background-color: $dark;
+		background-attachment: fixed;
+	}
+
+	.meta-list {
+		display: inline-block;
+		margin: 0;
+		float: right;
+
+		li {
+			position: relative;
+			@extend .post-title;
+			list-style: none;
+		}
+
+		.categories {
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			margin-left: -42.5%;
+			margin-bottom: 1.5rem;
+
+			text-align: center;
+
+			background-color: white;
+
+			opacity: 0;
+			visibility: hidden;
+
+			-webkit-transition: all 0.25s;
+			-moz-transition: all 0.25s;
+			-o-transition: all 0.25s;
+			-ms-transition: all 0.25s;
+			transition: all 0.25s;
+
+			li {
+				display: block;
+				width: 100%;
+				padding: 1rem 2rem;
+				border-bottom: none;
+				color: $dark;
+
+				&:first-child {
+					border-bottom: 2px solid $snow;
+				}
+			}
+
+			&:after {
+				top: 100%;
+				left: 50%;
+				border: solid transparent;
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				pointer-events: none;
+				border-color: rgba(234, 234, 234, 0);
+				border-top-color: $snow;
+				border-width: 10px;
+				margin-left: -10px;
+			}
+		}
+
+		&:hover {
+			cursor: help;
+		}
+
+		&:hover .categories {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

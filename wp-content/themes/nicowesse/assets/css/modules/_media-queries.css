@@ -1,0 +1,87 @@
+/* Phones */
+@media only screen and (max-width: 767px) {
+    .site-header {
+		height: 200px !important;
+	}
+
+	.site-header canvas {
+		display: none !important;
+	}
+
+	.site-header .site-title {
+		font-size: 2rem;
+	}
+
+	.site-header .site-description,
+	.home .site-header .site-description {
+		display: none;
+	}
+
+	.post-thumbnail .post-image {
+		min-height: 150px;
+	}
+
+	.post-thumbnail .post-link {
+		font-size: 2rem;
+		background-color: rgba(245,245,245, 0.3);
+	}
+
+	.post-thumbnail figcaption {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.search-toggle {
+		display: none;
+	}
+
+	.post-content p {
+		font-size: 1.25rem;
+	}
+
+	.post-content img.alignleft,
+	.post-caption.alignleft,
+	.post-content img.alignright,
+	.post-caption.alignright {
+		width: 100%;
+	}
+
+	.gallery-columns-3 .gallery-item,
+	.gallery-columns-4 .gallery-item {
+		max-width: 50%;
+		flex: 1 0 50%;
+	}
+
+	.post-navigation figure {
+		width: 45%;
+		min-height: 100px;
+	}
+
+	.post-navigation figcaption > a {
+		font-size: 1rem;
+		color: white;
+	}
+}
+
+/* Portrait phones */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+	
+}
+
+/* Tablets and large phones */
+@media only screen and (min-width: 768px) and (max-width: 1170px) {
+	.search-toggle {
+		display: none;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1170px) {
+}
+
+/* Large desktops and laptops ----------- */
+@media only screen and (min-width : 1600px) {
+	.home .site-header {
+		height: 600px;
+	}
+}

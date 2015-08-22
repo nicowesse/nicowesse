@@ -1,0 +1,82 @@
+/* Media Queries */
+
+// Small screens
+@media only screen { } /* Define mobile styles */
+
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) { 
+	.site-nav {
+		position: static;
+		text-align: center;
+
+		.site-name {
+			padding: 2rem 0;
+		}
+
+		.menu {
+			display: block;
+			float: none;
+			text-align: center;
+
+			.menu-item {
+				display: block;
+				margin-left: 0px;
+				padding: 0.5rem 0;
+			}
+		}
+	}
+
+	.site-header {
+		height: 25%;
+	
+
+		.article-meta {
+			.post-title {
+				display: block;
+				width: 100%;
+				text-align: center;
+				border-width: 7px;
+			}
+
+			.meta-list {
+				display: none;
+			}
+		}
+	}
+
+	.post-thumbnail {
+		.post-link {
+			opacity: 0.5;
+		}
+	}
+
+	.post-navigation {
+		margin: 2rem 0;
+	
+
+		figure {
+			display: block;
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+} 
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */

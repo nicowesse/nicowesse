@@ -1,0 +1,42 @@
+/* Site Styles: Navigation */
+
+.site-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 1rem;
+	background-color: rgba(247, 247, 247, 1);
+	//border-bottom: 3px solid $snow;
+
+	.site-name, .menu-item {
+		display: inline-block;
+		font-family: "Montserrat", "Helvetica", sans-serif;
+		font-size: 1.375rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	.menu {
+		float: 	right;
+		margin: 0px;
+
+		.menu-item {
+			list-style: none;
+			margin-left: 1rem;
+		}
+	}
+
+	a {
+		-webkit-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		-ms-transition: all 0.4s;
+		transition: all 0.4s;
+	}
+
+	a:hover {
+		color: $mainOrange;
+	}
+}
