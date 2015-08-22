@@ -11,8 +11,10 @@ get_header(); ?>
 
 <section class="l-page">
 
+<?php if ( get_search_query() ) : ?>
+
 	<header class="c-page-header c-page-header--search">
-		<h1 class="c-page-header__title">You searched for: <em><?php echo get_search_query() ?></em></h1>
+		<h2 class="c-page-header__title">You searched for: <em><?php echo get_search_query() ?></em></h2>
 	</header><!-- .page-header -->
 
 
@@ -31,18 +33,28 @@ get_header(); ?>
 
 			endwhile;
 			// Previous/next post navigation.
-			get_search_form();
-
 			the_paging_nav();
+
+			get_search_form();
 
 		else :
 			// If no content, include the "No posts found" template.
 			get_template_part( 'content', 'none' );
 
+			get_search_form();
+
 		endif;
 	?>
 
+<?php else : ?>
 
+	<header class="c-page-header c-page-header--search">
+		<h2 class="c-page-header__title">You didn't search for anything...</h2>
+	</header><!-- .page-header -->
+
+	<?php get_search_form(); ?>
+
+<?php endif; ?>
 
 </section>
 

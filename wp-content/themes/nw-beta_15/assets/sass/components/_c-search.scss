@@ -1,0 +1,47 @@
+/* ====================
+	Search component: c-search-form
+==================== */
+
+$border-style: 0.15rem solid $steel;
+
+.c-search-form {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	width: 100%;
+}
+
+	.c-search-form__field {
+		flex: 1 1 0;
+
+		padding: 1rem;
+		font-size: $h5;
+		font-weight: bold;
+		border: $border-style;
+
+		&:focus {
+			border-color: $jet;
+			outline: none;
+		}
+	}
+
+	.c-search-form__submit {
+		padding: 1rem 2rem;
+		font-size: $h5;
+		font-weight: bold;
+		border: $border-style;
+		border-left: none;
+		background-color: $vapor;
+
+		transition: 250ms;
+
+		&:hover {
+			background-color: $smoke;
+		}
+
+		&:active,
+		&:focus {
+			background-color: $nw-blue;
+			outline: 0;
+		}
+	}

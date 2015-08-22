@@ -1358,3 +1358,59 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 .c-read-more__link {
   display: inline-block;
 }
+
+/* ====================
+	Search component: c-search-form
+==================== */
+.c-search-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.c-search-form__field {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+      -ms-flex: 1 1 0;
+          flex: 1 1 0;
+  padding: 1rem;
+  font-size: 1.13333rem;
+  font-weight: bold;
+  border: 0.15rem solid #666666;
+}
+
+.c-search-form__field:focus {
+  border-color: #222222;
+  outline: none;
+}
+
+.c-search-form__submit {
+  padding: 1rem 2rem;
+  font-size: 1.13333rem;
+  font-weight: bold;
+  border: 0.15rem solid #666666;
+  border-left: none;
+  background-color: #F6F6F6;
+  -webkit-transition: 250ms;
+          transition: 250ms;
+}
+
+.c-search-form__submit:hover {
+  background-color: #EEEEEE;
+}
+
+.c-search-form__submit:active,
+.c-search-form__submit:focus {
+  background-color: #5990ff;
+  outline: 0;
+}

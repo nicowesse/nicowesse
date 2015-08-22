@@ -1,0 +1,7 @@
+/* ====================
+	Search component: c-search-form
+==================== */
+.c-search-form {
+  display: flex;
+  width: 100%;
+}
