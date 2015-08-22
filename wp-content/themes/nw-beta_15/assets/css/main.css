@@ -1465,7 +1465,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   -webkit-flex: 1 0 0%;
       -ms-flex: 1 0 0%;
           flex: 1 0 0%;
-  padding: 0rem;
+  padding: 0rem 0.5rem;
   font-size: 1rem;
   border: none;
 }
