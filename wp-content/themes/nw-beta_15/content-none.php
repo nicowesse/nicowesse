@@ -15,8 +15,13 @@
 	<p><?php printf( __( 'Ready for some writing? <a href="%1$s">Start here</a>.' ), admin_url( 'post-new.php' ) ); ?></p>
 
 	<?php elseif ( is_search() ) : ?>
+	
+	<header class="c-page-header">
+        <h2 class="c-page-header__title">Oh my..nothing here</h2>
+    </header>
 
-	<p>I guess the search went wrong. Atleast we couldn't find anything containing <strong><?php echo $_GET['s']; ?></strong>. You could try searching for something else?</p>
+	<p>I guess the search went wrong. At least we couldn't find <strong><?php echo $_GET['s']; ?></strong>. You could try searching for something else?</p>
+	
 	<?php get_search_form(); ?>
 
 	<?php else : ?>

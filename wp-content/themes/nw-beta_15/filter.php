@@ -16,8 +16,8 @@ $categories = get_categories();
     <ul class="c-filter__dropdown">
     <span class="c-filter__selected">graphic</span>
         <div class="c-filter__list-items">
-        <?php foreach ($categories as $cat) : ?>
-        <?php if ($cat->parent != 0 && $cat->count != 0) : ?>
+        <?php foreach ($categories as $cat) :
+        if ($cat->parent != 0 && $cat->count > 0) : ?>
 
             <li class="c-filter__item filter" data-filter=".category-<?= $cat->slug; ?>"><?= $cat->name; ?></li>
 

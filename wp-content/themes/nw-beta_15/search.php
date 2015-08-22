@@ -18,9 +18,8 @@ get_header(); ?>
 	</header><!-- .page-header -->
 
 
-	<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) {
 
-		<?php
 			// Start the Loop.
 			while ( have_posts() ) : the_post();
 
@@ -37,19 +36,17 @@ get_header(); ?>
 
 			get_search_form();
 
-		else :
+		} else {
 			// If no content, include the "No posts found" template.
 			get_template_part( 'content', 'none' );
 
-			get_search_form();
-
-		endif;
+		}
 	?>
 
 <?php else : ?>
 
 	<header class="c-page-header c-page-header--search">
-		<h2 class="c-page-header__title">You didn't search for anything...</h2>
+		<h3 class="c-page-header__title">You didn't search for anything...</h3>
 	</header><!-- .page-header -->
 
 	<?php get_search_form(); ?>

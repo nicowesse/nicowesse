@@ -12,7 +12,6 @@ get_header(); ?>
 if (have_posts()) :
     $posts_per_page = get_option('posts_per_page');
     $categories=get_categories($cat_args);
-    print_r($categories);
     query_posts("showposts=" . $posts_per_page); // show one latest post only
     while (have_posts()) : the_post();
         /*

@@ -28,6 +28,7 @@ $border-style: 0.15rem solid $steel;
 	justify-content: flex-end;
 	align-items: stretch;
 	width: 100%;
+	margin: 4rem 0;
 }
 
 	.c-search-form__field {
@@ -53,7 +54,7 @@ $border-style: 0.15rem solid $steel;
 		}
 
 		.c-nav-search.is-active & {
-			border-bottom: $border-style;
+			//border-bottom: $border-style;
 		}
 	}
 
@@ -86,7 +87,7 @@ $border-style: 0.15rem solid $steel;
 		}
 
 		.c-nav-search.is-active & {
-			border-bottom: $border-style;
+			//border-bottom: $border-style;
 		}
 	}
 

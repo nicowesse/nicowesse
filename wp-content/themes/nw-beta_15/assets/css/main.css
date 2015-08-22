@@ -816,7 +816,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-sitename {
   display: table-cell;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0;
@@ -863,7 +863,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0;
           flex: 1 1 0;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   text-align: right;
 }
 
@@ -963,7 +963,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 /*  ==========================================================================
     Styles for content-component
     ========================================================================== */
-.c-content {
+.c-content.c-content--post {
   display: none;
 }
 
@@ -1440,6 +1440,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
       -ms-flex-align: stretch;
           align-items: stretch;
   width: 100%;
+  margin: 4rem 0;
 }
 
 .c-search-form__field {
@@ -1470,10 +1471,6 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   border: none;
 }
 
-.c-nav-search.is-active .c-search-form__field {
-  border-bottom: 0.15rem solid #666666;
-}
-
 .c-search-form__submit-container {
   padding: 1rem 2rem;
   border: 0.15rem solid #666666;
@@ -1501,10 +1498,6 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-nav-search .c-search-form__submit-container::before {
   content: "🔍";
-}
-
-.c-nav-search.is-active .c-search-form__submit-container {
-  border-bottom: 0.15rem solid #666666;
 }
 
 .c-search-form__submit {
