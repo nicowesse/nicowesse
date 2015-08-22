@@ -887,7 +887,8 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   }
 }
 
-.menu-item.current-menu-item {
+.menu-item.current-menu-item,
+.menu-item.current_page_parent {
   font-weight: bold;
 }
 

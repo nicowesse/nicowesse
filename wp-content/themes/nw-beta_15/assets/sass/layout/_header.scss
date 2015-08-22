@@ -103,7 +103,8 @@ $header-color: $jet;
                     }
                 }
 
-                &.current-menu-item {
+                &.current-menu-item,
+                &.current_page_parent {
                     font-weight: bold;
                 }
             }
