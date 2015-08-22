@@ -1,0 +1,65 @@
+/*  ==========================================================================
+    Grid - based on flexbox
+    ========================================================================== */
+
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+$column-count: 12;
+
+$gutter-width: 1rem;
+$outer-margin: 1rem;
+$gutter-compensation: $gutter-width / 2  * -1 ;
+$half-gutter-width: $gutter-width / 2;
+
+$screen-xs-breakpoint: 30em;
+$screen-sm-breakpoint: 48em;
+$screen-md-breakpoint: 62em;
+$screen-lg-breakpoint: 75em;
+$container-sm: 45rem;
+$container-md: 60rem;
+$container-lg: 70rem;
+
+.o-container {
+  max-width: $container-lg;
+  margin-right: auto;
+  margin-left: auto;
+
+  @extend %clearfix;
+
+  @include breakpoint($screen-sm-breakpoint) {
+    max-width: $container-sm;
+  }
+
+  @include breakpoint($screen-md-breakpoint) {
+    max-width: $container-md;
+  }
+}
+
+.o-row {
+  height: 100%;
+  margin: 0 $outer-margin;
+}
+
+[class*=".col"]  {
+  padding-right: $half-gutter-width;
+  padding-left: $half-gutter-width;
+}
+
+@for $i from 1 through $column-count {
+
+    .col-#{$i} {
+        width: 100% / $column-count * $i;
+    }
+
+}
+

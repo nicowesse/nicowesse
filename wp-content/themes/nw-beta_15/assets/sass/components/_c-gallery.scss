@@ -1,0 +1,66 @@
+/*  ==========================================================================
+    Styles for gallery-component
+    ========================================================================== */
+
+.c-gallery {
+
+}
+
+    .c-gallery__element {
+        position: relative;
+    }
+
+        .c-gallery__image {
+            max-height: 90%;
+            max-height: 80vh;
+        }
+
+        .c-gallery__caption {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: $zIndex-1;
+
+            padding: 1.5rem;
+
+            color: $off-white;
+            text-align: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 0;
+
+                background: radial-gradient(at bottom, rgba(34,34,34,0.35) 0%, rgba(34,34,34,0) 65%);
+            }
+        }
+
+            .c-gallery__image-title {
+                position: relative;
+                z-index: $zIndex-2;
+                display: block;
+                font-size: $h4;
+                font-weight: bold;
+                padding: 0.5rem 0;
+
+                & + .c-gallery__image-caption::before {
+                    content: '';
+                    display: block;
+                    margin: 0 auto 1rem;
+                    width: 10%;
+                    height: 0;
+                    border-bottom: 0.15rem solid $iron;
+                }
+            }
+
+            .c-gallery__image-caption {
+                position: relative;
+                z-index: $zIndex-2;
+                display: block;
+                font-size: $h5;
+            }

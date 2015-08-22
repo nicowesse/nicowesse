@@ -1,0 +1,1 @@
+require(["background-check.min"],function(c){console.log(c)});

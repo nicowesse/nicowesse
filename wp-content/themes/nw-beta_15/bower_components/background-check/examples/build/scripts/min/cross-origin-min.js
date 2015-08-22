@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",function(){var t=document.querySelector("img");t.src=t.getAttribute("data-src"),BackgroundCheck.init({targets:".target",images:t})});

@@ -1,0 +1,21 @@
+
+.btn {
+    position: relative;
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    color: $jet;
+
+    transition: 250ms;
+
+    &:hover,
+    &:active {
+        color: $nw-blue;
+    }
+
+    &::before {
+        content: "+";
+        margin-right: 0.5rem;
+        font-weight: normal;
+    }
+}
+

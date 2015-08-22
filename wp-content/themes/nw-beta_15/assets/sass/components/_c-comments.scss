@@ -1,0 +1,145 @@
+/*  ==========================================================================
+    Styles for comments-component
+    ========================================================================== */
+
+.c-comments {
+    margin: 5rem 0;
+}
+
+    .comment-reply-title {
+
+    }
+
+    .c-comment__field {
+
+    }
+
+        .c-comment__label {
+            display: block;
+            margin: 0.25rem 0;
+            opacity: 0;
+            transition: 250ms;
+
+            &.is-focused {
+                opacity: 0.5;
+            }
+        }
+
+        .c-comment__input {
+            width: 100%;
+            padding: 0.75rem 0.75rem 0.5rem;
+            font-size: $base-paragraph-size;
+            border: 0 solid transparent;
+            border-bottom: 0.25rem solid transparent;
+
+            transition: 250ms;
+
+            &:focus {
+                outline: none;
+                background-color: $silver;
+                border-color: $silver;
+            }
+
+            &:valid {
+                background-color: $silver;
+            }
+
+            &:valid:focus {
+                border-color: hsla(100, 100%, 70%, 0.5);
+            }
+
+            &[value]:not([value=""]) {
+                border-color: $silver;
+            }
+
+            &:invalid:focus {
+                border-color: hsla(0, 100%, 70%, 0.5);
+            }
+
+
+        }
+
+        .form-submit {
+
+            &::before {
+                @extend %plus;
+            }
+
+            &:hover,
+            &:active {
+                color: $nw-blue;
+            }
+
+            .submit {
+                border: none;
+                background: none;
+                font-weight: bold;
+            }
+        }
+
+        .comment-reply-title {
+
+        }
+
+        #cancel-comment-reply-link {
+            display: block;
+            margin: 1rem 0;
+            font-size: $base-paragraph-size;
+            opacity: 0.5;
+        }
+
+    .c-comment__list {
+        padding: 0;
+    }
+
+        .comment {
+            padding: 1rem 0;
+            list-style: none;
+        }
+
+            .comment-body {
+                margin: 2rem 0;
+            }
+
+            .comment-meta {
+                margin-bottom: 1rem;
+            }
+
+                .comment-author {
+                    display: inline-block;
+                    & .says {
+                        display: none;
+                    }
+                }
+
+                .comment-metadata {
+                    display: inline-block;
+                    margin-left: 0.25rem;
+                    opacity: 0.2;
+                }
+
+                .comment-awaiting-moderation {
+                    padding: 0.5rem 1rem;
+                    //background-color: $silver;
+                    border-left: 0.25rem solid $nw-red;
+                }
+
+                .comment-content {
+                    padding: 1rem 0;
+                }
+
+                .reply {
+
+                }
+
+                    .comment-reply-link {
+                        font-weight: bold;
+
+                        &::before {
+                            @extend %plus;
+                        }
+                    }
+
+        .children {
+            border-left: 0.25rem solid $gainsboro;
+        }

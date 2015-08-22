@@ -1,0 +1,89 @@
+/*  ==========================================================================
+    Styles for comments-component
+    ========================================================================== */
+
+.c-filter {
+    padding: 10rem 0;
+}
+
+    .c-filter__text {
+        font-weight: normal;
+    }
+
+    .c-filter__dropdown {
+        position: relative;
+        display: inline;
+        margin: 0;
+        padding: 0;
+
+        background-image: linear-gradient(to bottom, transparent 75%, $steel 75%);
+        background-size: 0.25rem 0.25rem;
+        background-position: 0 0.9em;
+        background-repeat: repeat-x;
+
+        &::after {
+            position: relative;
+            bottom: 0.1rem;
+            content: "▼";
+            font-size: 0.5em;
+            opacity: 0.2;
+        }
+    }
+
+        .c-filter__selected {
+            font-size: $h5;
+            color: transparent;
+            transition: 250ms;
+
+            .c-filter.active & {
+                color: $paragraph-black;
+            }
+        }
+
+        .c-filter__list-items {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 0.15rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: 250ms;
+
+            .c-filter__dropdown:hover & {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+            .c-filter__item {
+                display: block;
+                padding: 0.5rem 0;
+                font-size: $h5;
+                text-transform: lowercase;
+                white-space: nowrap;
+                opacity: 0.5;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.75;
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+
+    .c-filter__reset {
+        float: right;
+        opacity: 0;
+        transition: 250ms;
+
+        .c-filter.active & {
+            opacity: 0.3;
+        }
+
+        .c-filter.active &:hover {
+            cursor: pointer;
+            opacity: 1;
+        }
+    }

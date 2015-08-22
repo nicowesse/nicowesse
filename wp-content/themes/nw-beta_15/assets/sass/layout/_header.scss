@@ -1,0 +1,105 @@
+/*  ==========================================================================
+    Header styles for:
+        .l-header
+    ========================================================================== */
+
+$header-padding: 5rem 0;
+$header-padding--mobile: 2rem 0;
+$header-color: $jet;
+
+@include breakpoint(48rem) {
+    $header-padding: 2rem 0;
+}
+
+.l-header {
+    display: table;
+    width: 100%;
+}
+
+    .c-sitename {
+        display: table-cell;
+        padding: $header-padding;
+
+        @include breakpoint(48rem) {
+            display: block;
+            margin-top: 5rem;
+            padding: $header-padding--mobile;
+            font-size: $h2;
+            text-align: center;
+        }
+    }
+
+        .c-sitename__title {
+            margin: 0;
+            font-size: $h5;
+
+            @include breakpoint(48rem) {
+                font-size: $h3;
+            }
+        }
+
+        .c-sitename__link {
+            color: $header-color;
+        }
+
+        .c-sitename__tagline {
+            margin-left: 1rem;
+            opacity: 0.2;
+        }
+
+    .c-nav {
+        display: table-cell;
+        padding: $header-padding;
+        text-align: right;
+
+        @include breakpoint(48rem) {
+            display: block;
+            padding: $header-padding--mobile;
+            float: none;
+            text-align: center;
+        }
+    }
+
+        .c-nav__menu,
+        .c-nav ul {
+            margin: 0;
+            padding: 0;
+        }
+
+            .menu-item {
+                display: inline-block;
+                padding: 0.25rem;
+                font-size: $h5;
+                color: $header-color;
+                list-style: none;
+
+                &::after {
+                    content: "+";
+                    margin-left: 0.75rem;
+                    font-weight: 200;
+                }
+
+                &:last-child::after {
+                    content: "";
+                }
+
+                &:hover {
+                    color: $nw-blue;
+                }
+
+                &:hover::after {
+                    color: $header-color;
+                }
+
+                a {
+                    color: currentColor;
+
+                    @include breakpoint(48rem) {
+                        padding: 1rem;
+                    }
+                }
+
+                &.current-menu-item {
+                    font-weight: bold;
+                }
+            }

@@ -1,0 +1,36 @@
+/*  ==========================================================================
+    Styles for post-component
+    ========================================================================== */
+
+.c-post {
+
+}
+
+    .c-post__header {
+        padding: 5rem 0;
+    }
+
+        .c-post__title {
+            margin: 0;
+            color: $header-black;
+        }
+
+    .c-post__content {
+
+        blockquote {
+            margin: 2rem 0;
+            padding: 1.5rem 3rem;
+            border-left: 0.25rem solid $iron;
+
+            p {
+                margin-top: 0;
+                color: $paragraph-black;
+            }
+
+            code,
+            pre {
+                margin-bottom: 0;
+                color: $iron;
+            }
+        }
+    }

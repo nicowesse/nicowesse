@@ -1,0 +1,162 @@
+/*! Typebase.less v0.1.0 | MIT License */
+
+// Typesetting variables. Edit these!
+$base-font-family: "Merriweather", serif;
+$header-font-family: $base-font-family;
+$base-font-size: 1rem; // in pixels. This would result in 22px on desktop
+$base-paragraph-size: 1.25 * 1rem;
+$base-line-height: 1.7; // how large the line height is as a multiple of font size
+$leading: $base-line-height * 1rem;
+// Rate of growth for headings
+// I actually like this to be slightly smaller then the leading. Makes for tight headings.
+$scale: 1.7;
+$responsive-scale: 2vmin;
+
+/* Header-sizes */
+
+$h1-scale: 3;
+$h2-scale: 2.25;
+$h3-scale: 1.5;
+$h4-scale: 1;
+$h5-scale: 1.5;
+$h6-scale: 2;
+
+$h1: $h1-scale * $scale * $base-font-size;
+$h2: $h2-scale * $scale * $base-font-size;
+$h3: $h3-scale * $scale * $base-font-size;
+$h4: $h4-scale * $scale * $base-font-size;
+$h5: $scale / $h5-scale * $base-font-size;
+$h6: $scale / $h6-scale * $base-font-size;
+
+/* Setup */
+
+html {
+    /* Change default typefaces here */
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    // Make everything look a little nicer in webkit
+    -webkit-font-smoothing: antialiased;
+    // -webkit-text-size-adjust: auto
+    // -moz-text-size-adjust: auto
+    // -ms-text-size-adjust: auto
+    // -o-text-size-adjust: auto
+    // text-size-adjust: auto
+
+}
+/* Copy & Lists */
+
+p {
+    font-size: $base-paragraph-size;
+    line-height: $base-line-height;
+    margin-top: $leading / 2;
+    margin-bottom: $leading / 2;
+}
+ul,
+ol {
+    margin-top: $leading;
+    margin-bottom: $leading;
+    font-size: $base-paragraph-size;
+    li {
+        line-height: 1;
+        padding: 0.5rem;
+    }
+    ul,
+    ol {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+blockquote {
+    line-height: $base-line-height;
+    margin-top: $leading;
+    margin-bottom: $leading;
+}
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* Change heading typefaces here */
+    font-family: $header-font-family;
+    margin-top: $leading;
+    margin-bottom: $leading;
+    line-height: $base-line-height * 0.75;
+}
+h1 {
+    font-size: $h1-scale * $scale * $base-font-size;
+
+    @include breakpoint($screen-md-breakpoint) {
+        font-size: $h1-scale * $scale * $responsive-scale;
+    }
+}
+h2 {
+    font-size: $h2-scale * $scale * $base-font-size;
+
+
+    @include breakpoint($screen-md-breakpoint) {
+        font-size: $h2-scale * $scale * $responsive-scale;
+    }
+}
+h3 {
+    font-size: $h3-scale * $scale * $base-font-size;
+
+
+    @include breakpoint($screen-md-breakpoint) {
+        font-size: $h3-scale * $scale * $responsive-scale;
+    }
+}
+h4 {
+    font-size: $h4-scale * $scale * $base-font-size;
+
+    @include breakpoint($screen-md-breakpoint) {
+        font-size: $h4-scale * $scale * $responsive-scale;
+    }
+}
+h5 {
+    font-size: $scale / $h5-scale * $base-font-size;
+}
+h6 {
+    font-size: $scale / $h6-scale  * $base-font-size;
+}
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+
+/* Tables */
+
+table {
+    margin-top: $leading;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+td,
+th {
+    padding: 0;
+    line-height: $base-line-height * $base-font-size;
+}
+/* Code blocks */
+
+code,
+pre {
+    font-family: Consolas, Monaco, monospace;
+    font-size: $base-paragraph-size;
+    // Forces text to constrain to the line-height. Not ideal, but works.
+    vertical-align: bottom;
+}
+/* Leading paragraph text */
+
+.lead {
+    font-size: $scale * 1rem;
+}
+/* Hug a the block above you */
+
+.hug {
+    margin-top: 0;
+}

@@ -1,0 +1,34 @@
+/*  ==========================================================================
+    Styles for pagination-component
+    ========================================================================== */
+
+.c-pagination {
+    margin: 5rem 0;
+}
+
+    .c-pagination__links {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        .page-numbers {
+            padding: 1.5rem 2rem 1rem;
+            font-size: $base-paragraph-size;
+            transition: 250ms;
+
+            &:hover {
+
+            }
+
+            &.current {
+                font-weight: bold;
+            }
+
+            &.next,
+            &.previous {
+
+            }
+
+
+        }

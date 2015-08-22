@@ -1,0 +1,17 @@
+/*  ==========================================================================
+    SASS variables
+    ========================================================================== */
+
+$base-font-size: 100% !default;
+$rem-base: $base-font-size;
+
+// $base-line-height is 24px while $base-font-size is 16px
+$base-line-height: 1.5 !default;
+
+$screen-xs-breakpoint: 30em;
+$screen-sm-breakpoint: 48em;
+$screen-md-breakpoint: 62em;
+$screen-lg-breakpoint: 75em;
+$container-sm: 45rem;
+$container-md: 60rem;
+$container-lg: 70rem;

@@ -1,0 +1,41 @@
+/*  ==========================================================================
+    Base styles
+    ========================================================================== */
+
+html,
+body {
+    height: 100%;
+}
+
+/// Overrides
+
+img {
+    max-width: 100%;
+}
+
+figure {
+    margin: 0;
+}
+
+a {
+    color: $paragraph-black;
+    transition: 250ms;
+
+    &:hover {
+        color: $nw-blue;
+    }
+
+    // External links
+    &[href^="http://"]:not([href*="nicowesse.com"]),
+    &[href^="https://"]:not([href*="nicowesse.com"]) {
+        color: mix($nw-blue, $paragraph-black, 50%);
+    }
+
+    &[href^="http://"]:not([href*="nicowesse.com"])::after,
+    &[href^="https://"]:not([href*="nicowesse.com"])::after {
+        content: "+";
+        opacity: 0.5;
+        vertical-align: super;
+        font-size: smaller;
+    }
+}
