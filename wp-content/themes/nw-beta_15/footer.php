@@ -7,7 +7,7 @@
 ?>
 
 <footer class="l-footer">
-    <h4 class="l-footer__copyright">© NICO <?= date('Y'); ?></h4>
+    <h4 class="l-footer__copyright">© <?= date('Y'); ?></h4>
 </footer>
 
 </div><!-- Ends .o-row -->
