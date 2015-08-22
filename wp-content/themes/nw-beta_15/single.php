@@ -21,7 +21,7 @@ get_header(); ?>
 		<article <?php post_class('c-post'); ?>>
 
 			<header class="c-post__header">
-				<h2 class="c-post__title"><?php echo the_title(); ?></h2>
+				<h3 class="c-post__title"><?php the_title(); ?></h3>
 
 			</header><!-- .c-post__header -->
 

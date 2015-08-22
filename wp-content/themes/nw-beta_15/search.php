@@ -14,7 +14,7 @@ get_header(); ?>
 <?php if ( get_search_query() ) : ?>
 
 	<header class="c-page-header c-page-header--search">
-		<h2 class="c-page-header__title">You searched for: <em><?php echo get_search_query() ?></em></h2>
+		<h3 class="c-page-header__title">Searching for: <em><?php echo get_search_query() ?></em></h3>
 	</header><!-- .page-header -->
 
 

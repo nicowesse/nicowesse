@@ -23,7 +23,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 	<header class="c-page-header c-page-header--archive">
-		<h2 class="c-page-header__title">
+		<h3 class="c-page-header__title">
 			<?php
 				if ( is_day() ) :
 					printf('Daily Archives: %s', get_the_date() );
@@ -39,7 +39,7 @@ get_header(); ?>
 
 				endif;
 			?>
-		</h2>
+		</h3>
 	</header><!-- .page-header -->
 
 	<?php

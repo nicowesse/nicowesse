@@ -19,8 +19,8 @@ if (has_post_thumbnail( $post->ID ) ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class('c-content c-content--post'); ?>>content-post.php
     <input type="hidden" name="" value="<?php echo $post->post_name; ?>">
 	<figure class="c-content__thumbnail" style="background-image: url('<?= $thumbnail_url; ?>')">
-			<a class="c-content__thumbnail-link" href="<?php the_permalink(); ?>">
-				<span class="c-content__thumbnail-button btn btn--light btn--arrow" data-icon="&#xf132;"><?php the_title(); ?></span>
-			</a>
+		<a class="c-content__thumbnail-link" href="<?php the_permalink(); ?>">
+			<span class="c-content__thumbnail-button btn btn--light btn--arrow" data-icon="&#xf132;"><?php the_title(); ?></span>
+		</a>
 	</figure>
 </article>
