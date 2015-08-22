@@ -39,6 +39,25 @@
             float: right;
             text-align: right;
         }
+
+        &-tags {
+            margin: 1rem 0;
+
+            &-prefix {
+                margin-right: 0.25rem;
+            }
+        }
+
+        &-tag-pill {
+            //margin: 0 0.5rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.15rem;
+            background-color: $smoke;
+
+            &--illustrator {
+                background-color: orange;
+            }
+        }
     }
 
     .c-post__content {
@@ -89,7 +108,7 @@
             }
 
             &--single {
-                
+
             }
         }
     }

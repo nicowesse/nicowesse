@@ -463,6 +463,7 @@ html[xmlns] .slides {
 }
 
 .loading .flex-viewport {
+  display: none;
   min-height: 200px;
   max-height: 300px;
 }
@@ -1074,6 +1075,24 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 .c-post__meta-modified {
   float: right;
   text-align: right;
+}
+
+.c-post__meta-tags {
+  margin: 1rem 0;
+}
+
+.c-post__meta-tags-prefix {
+  margin-right: 0.25rem;
+}
+
+.c-post__meta-tag-pill {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.15rem;
+  background-color: #EEEEEE;
+}
+
+.c-post__meta-tag-pill--illustrator {
+  background-color: orange;
 }
 
 .c-post__content blockquote {
