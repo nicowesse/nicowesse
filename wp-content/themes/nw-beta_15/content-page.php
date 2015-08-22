@@ -9,7 +9,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('c-page c-content--page'); ?>>
-    <header class="c-page-header">
+    <header class="c-page-header c-page-header--page">
         <h2 class="c-page-header__title"><?php the_title(); ?></h2>
     </header>
 

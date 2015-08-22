@@ -19,7 +19,7 @@ $metadata = wp_get_attachment_metadata();
 	?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class('c-content c-content--image'); ?>>
 				<header class="c-content__header">
-					<h1 class="c-content__header"><?php the_title(); ?></h1>
+					<h2 class="c-content__header"><?php the_title(); ?></h2>
 				</header>
 
 				<figure class="c-content__thumbnail">

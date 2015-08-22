@@ -16,7 +16,7 @@ get_header(); ?>
 	<?php if ( have_posts() ) : ?>
 
 	<header class="c-page-header c-page-header--category">
-		<h1 class="c-page-header__title"><?php printf(single_cat_title( '', false ) ); ?></h1>
+		<h2 class="c-page-header__title"><?php printf(single_cat_title( '', false ) ); ?></h2>
 
 	</header><!-- .archive-header -->
 

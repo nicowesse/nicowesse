@@ -22,7 +22,7 @@
 	<?php else : ?>
 
 	<header class="c-page-header">
-        <h1 class="c-page-header__title">Oh my..nothing here</h1>
+        <h2 class="c-page-header__title">Oh my..nothing here</h2>
     </header>
 
 	<p>Can't seem to find what you are looking for. You could try searching for it or dive into my other pages.</p>
