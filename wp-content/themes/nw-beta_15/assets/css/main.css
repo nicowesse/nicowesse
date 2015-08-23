@@ -819,7 +819,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
 
 .c-sitename {
   display: table-cell;
-  padding: 5rem 1rem;
+  padding: 5rem 0.5rem;
   padding-left: 0;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
@@ -867,7 +867,7 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   -webkit-flex: 1 1 0;
       -ms-flex: 1 1 0;
           flex: 1 1 0;
-  padding: 5rem 1rem;
+  padding: 5rem 0.5rem;
   text-align: right;
 }
 
@@ -1485,9 +1485,9 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 9%;
-      -ms-flex: 0 0 9%;
-          flex: 0 0 9%;
+  -webkit-flex: 0 0 8%;
+      -ms-flex: 0 0 8%;
+          flex: 0 0 8%;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
@@ -1527,6 +1527,12 @@ a[href^="https://"]:not([href*="nicowesse.com"])::after {
           align-items: stretch;
   width: 100%;
   margin: 4rem 0;
+}
+
+@media (max-width: 48rem) {
+  .c-search-form {
+    margin: 1rem 0;
+  }
 }
 
 .c-search-form__field {

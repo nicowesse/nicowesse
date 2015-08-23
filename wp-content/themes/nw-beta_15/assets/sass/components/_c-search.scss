@@ -6,7 +6,7 @@ $border-style: 0.15rem solid $steel;
 
 .c-nav-search {
 	display: flex;
-	flex: 0 0 9%;
+	flex: 0 0 8%;
 	align-items: center;
 	opacity: 0.1;
 
@@ -29,6 +29,10 @@ $border-style: 0.15rem solid $steel;
 	align-items: stretch;
 	width: 100%;
 	margin: 4rem 0;
+
+	@include breakpoint(48rem) {
+        margin: 1rem 0;
+    }
 }
 
 	.c-search-form__field {
