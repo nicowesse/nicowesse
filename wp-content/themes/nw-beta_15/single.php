@@ -30,17 +30,20 @@ get_header(); ?>
 			</section>
 
 			<section class="c-post__meta">
-				<div class="c-post__meta-tags">
-				<span class="c-post__meta-tags-prefix">Tags:</span>
 				<?php
 				$posttags = get_the_tags();
 				if ($posttags) : ?>
+				
+				<div class="c-post__meta-tags">
+				<span class="c-post__meta-tags-prefix">Tags:</span>
+				
 				<?php foreach($posttags as $tag) : ?>
 				    <span class="c-post__meta-tag-pill c-post__meta-tag-pill--<?= $tag->slug; ?>"><?= $tag->name; ?></span>  
 				  <?php endforeach; ?>
-				<?php endif; ?>
-
 				</div>
+
+				<?php endif; ?>
+				
 				<span class="c-post__meta-publish">Published: <?php the_date('d.m.y'); ?></span>
 				<span class="c-post__meta-category">in <?php the_category(','); ?></span>
 				<span class="c-post__meta-modified">Updated: <?php the_modified_date('d.m.y'); ?></span>
